@@ -16,6 +16,10 @@
 		1330EB2927FFD8F3004B690A /* PlannerIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB2827FFD8F3004B690A /* PlannerIOSTests.swift */; };
 		1330EB3327FFD8F3004B690A /* PlannerIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB3227FFD8F3004B690A /* PlannerIOSUITests.swift */; };
 		1330EB3527FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */; };
+		13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C20D2802868100BB3B40 /* PlannerViewController.swift */; };
+		13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */; };
+		13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */; };
+		13F9C21D2802930E00BB3B40 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		1330EB2E27FFD8F3004B690A /* PlannerIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlannerIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1330EB3227FFD8F3004B690A /* PlannerIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerIOSUITests.swift; sourceTree = "<group>"; };
 		1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13F9C20D2802868100BB3B40 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
+		13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +107,9 @@
 		1330EB1027FFD8F3004B690A /* PlannerIOS */ = {
 			isa = PBXGroup;
 			children = (
-				1330EB1127FFD8F3004B690A /* AppDelegate.swift */,
-				1330EB1327FFD8F3004B690A /* SceneDelegate.swift */,
-				1330EB1527FFD8F3004B690A /* ViewController.swift */,
+				13F9C212280286C000BB3B40 /* Delegates */,
+				13F9C20F2802869200BB3B40 /* ViewControllers */,
+				13F9C21328028B2500BB3B40 /* Helpers */,
 				1330EB1727FFD8F3004B690A /* Main.storyboard */,
 				1330EB1A27FFD8F3004B690A /* Assets.xcassets */,
 				1330EB1C27FFD8F3004B690A /* LaunchScreen.storyboard */,
@@ -125,6 +133,34 @@
 				1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */,
 			);
 			path = PlannerIOSUITests;
+			sourceTree = "<group>";
+		};
+		13F9C20F2802869200BB3B40 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1330EB1527FFD8F3004B690A /* ViewController.swift */,
+				13F9C20D2802868100BB3B40 /* PlannerViewController.swift */,
+				13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		13F9C212280286C000BB3B40 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1330EB1127FFD8F3004B690A /* AppDelegate.swift */,
+				1330EB1327FFD8F3004B690A /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		13F9C21328028B2500BB3B40 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */,
+				13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +269,7 @@
 			files = (
 				1330EB1E27FFD8F3004B690A /* LaunchScreen.storyboard in Resources */,
 				1330EB1B27FFD8F3004B690A /* Assets.xcassets in Resources */,
+				13F9C21D2802930E00BB3B40 /* CustomTableViewCell.xib in Resources */,
 				1330EB1927FFD8F3004B690A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */,
 				1330EB1627FFD8F3004B690A /* ViewController.swift in Sources */,
+				13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */,
+				13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */,
 				1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */,
 				1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */,
 			);
