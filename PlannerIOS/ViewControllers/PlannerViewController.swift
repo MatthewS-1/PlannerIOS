@@ -26,7 +26,16 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         table.dataSource = self
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
-
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("task"), object: nil)
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        let input = notification.object as! Array<String>?
+        let taskName = input![0]
+        let taskDate = input![1]
+        tasks.append(Task(name: taskName, time: taskDate))
+        table.reloadData()
+        print(tasks.count)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,7 +44,6 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
-        
         return cell
     }
 }

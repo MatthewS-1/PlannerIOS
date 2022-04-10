@@ -15,7 +15,7 @@ class TaskViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        format.dateFormat = "h:mm a 'on' MMMM dd, yyyy"
+        format.dateFormat = "h:mm a MM/dd/yyyy"
         format.amSymbol = "AM"
         format.pmSymbol = "PM"
     }
@@ -23,7 +23,7 @@ class TaskViewController: UIViewController {
     @IBAction func confirmButton(_ sender: Any) {
         let date: String = format.string(from: datePicker.date)
         let taskName: String = field.text!
-        print(taskName)
-        print(date)
+        NotificationCenter.default.post(name: Notification.Name("task"), object: [taskName, date])
+        dismiss(animated: true)
     }
 }
