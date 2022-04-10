@@ -89,11 +89,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="V9a-oZ-iec">
-                                <rect key="frame" x="300" y="54" width="94" height="33"/>
-                            </stepper>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Vu-gvh">
-                                <rect key="frame" x="0.0" y="122" width="414" height="654"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eP-xb-3bg">
@@ -105,39 +102,113 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-2b-zfY">
-                                <rect key="frame" x="118" y="801" width="179" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-ay-j2T">
+                                <rect key="frame" x="330.5" y="55" width="83.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Finished!"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
+                                <connections>
+                                    <segue destination="sXO-bY-ooc" kind="show" id="z55-ER-8pN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-2b-zfY">
+                                <rect key="frame" x="118" y="771" width="179" height="60"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Finished! (Clear Planner)">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RMG-H3-PSN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lRe-Vu-gvh" firstAttribute="top" secondItem="V9a-oZ-iec" secondAttribute="bottom" constant="35" id="1j7-Nd-eaY"/>
                             <constraint firstItem="5eP-xb-3bg" firstAttribute="leading" secondItem="i3s-sD-vPe" secondAttribute="leadingMargin" id="5p8-9r-zCh"/>
-                            <constraint firstItem="V9a-oZ-iec" firstAttribute="top" secondItem="RMG-H3-PSN" secondAttribute="top" constant="10" id="7cg-8l-T6V"/>
-                            <constraint firstItem="5eP-xb-3bg" firstAttribute="centerY" secondItem="V9a-oZ-iec" secondAttribute="centerY" id="ABj-aK-2PZ"/>
-                            <constraint firstItem="RMG-H3-PSN" firstAttribute="trailing" secondItem="3qy-2b-zfY" secondAttribute="trailing" constant="117" id="D2j-qH-Qlw"/>
+                            <constraint firstItem="RMG-H3-PSN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5eP-xb-3bg" secondAttribute="trailing" symbolic="YES" id="C96-98-uom"/>
+                            <constraint firstItem="lRe-Vu-gvh" firstAttribute="top" secondItem="5eP-xb-3bg" secondAttribute="bottom" constant="33" id="D7f-SP-vSO"/>
+                            <constraint firstItem="3qy-2b-zfY" firstAttribute="centerX" secondItem="lRe-Vu-gvh" secondAttribute="centerX" id="Ek3-ff-kCL"/>
                             <constraint firstItem="lRe-Vu-gvh" firstAttribute="leading" secondItem="RMG-H3-PSN" secondAttribute="leading" id="FMK-92-hP0"/>
-                            <constraint firstItem="V9a-oZ-iec" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5eP-xb-3bg" secondAttribute="trailing" constant="8" symbolic="YES" id="YW1-9N-Pu0"/>
-                            <constraint firstItem="3qy-2b-zfY" firstAttribute="leading" secondItem="RMG-H3-PSN" secondAttribute="leading" constant="118" id="Zp5-Wb-LnP"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3qy-2b-zfY" secondAttribute="bottom" constant="-18" id="VJY-k8-gHg"/>
+                            <constraint firstItem="3qy-2b-zfY" firstAttribute="leading" secondItem="RMG-H3-PSN" secondAttribute="leading" constant="118" id="bAR-CI-Ejc"/>
                             <constraint firstItem="RMG-H3-PSN" firstAttribute="bottom" secondItem="lRe-Vu-gvh" secondAttribute="bottom" constant="86" id="dHF-Bi-Y5l"/>
-                            <constraint firstItem="V9a-oZ-iec" firstAttribute="trailing" secondItem="i3s-sD-vPe" secondAttribute="trailingMargin" id="n6f-yR-Kva"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5eP-xb-3bg" secondAttribute="trailing" constant="8" symbolic="YES" id="fzo-Ds-YJr"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="centerY" secondItem="5eP-xb-3bg" secondAttribute="centerY" id="pGg-Ei-Lfv"/>
                             <constraint firstItem="5eP-xb-3bg" firstAttribute="top" secondItem="RMG-H3-PSN" secondAttribute="top" constant="8" id="s0z-aQ-TbV"/>
+                            <constraint firstItem="3qy-2b-zfY" firstAttribute="top" secondItem="lRe-Vu-gvh" secondAttribute="bottom" constant="44" id="u0r-5q-bAr"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="trailing" secondItem="lRe-Vu-gvh" secondAttribute="trailing" id="usQ-Ux-Ng2"/>
                             <constraint firstItem="RMG-H3-PSN" firstAttribute="trailing" secondItem="lRe-Vu-gvh" secondAttribute="trailing" id="wQl-sP-EBr"/>
-                            <constraint firstItem="RMG-H3-PSN" firstAttribute="bottom" secondItem="3qy-2b-zfY" secondAttribute="bottom" constant="30" id="xpY-sv-Qkw"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="plannerStepper" destination="V9a-oZ-iec" id="lRc-19-5cf"/>
                         <outlet property="plannerTitle" destination="5eP-xb-3bg" id="A65-vn-1jg"/>
                         <outlet property="table" destination="lRe-Vu-gvh" id="kZD-Zy-7yY"/>
+                        <outlet property="taskButton" destination="ieV-ay-j2T" id="Np7-Q0-cvg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3z-vj-vtm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750.72463768115949" y="71.651785714285708"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="lfl-WH-o9G">
+            <objects>
+                <viewController id="sXO-bY-ooc" customClass="TaskViewController" customModule="PlannerIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y2G-CC-cMY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYw-d5-lzL">
+                                <rect key="frame" x="54" y="290" width="307" height="451"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-yP-FK4">
+                                        <rect key="frame" x="33" y="165" width="240" height="151"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                            <!--1970-01-01 11:00:00 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siU-4k-OpD">
+                                        <rect key="frame" x="97" y="324" width="113" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add Task"/>
+                                        <connections>
+                                            <action selector="confirmButton:" destination="sXO-bY-ooc" eventType="touchUpInside" id="Ovq-Rd-tON"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name of Task" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oO6-7v-wUC">
+                                        <rect key="frame" x="32" y="117" width="243" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85734806540086095" green="0.85734806540086095" blue="0.85734806540086095" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gmH-KB-emA"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wI0-d5-Eiz"/>
+                    <connections>
+                        <outlet property="datePicker" destination="4vi-yP-FK4" id="gIu-2M-qvF"/>
+                        <outlet property="field" destination="oO6-7v-wUC" id="g3R-VJ-GpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8iU-1n-qtn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1430.4347826086957" y="71.651785714285708"/>
         </scene>
         <!--Analytics View Controller-->
         <scene sceneID="X5M-ha-3ii">

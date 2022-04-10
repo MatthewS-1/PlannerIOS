@@ -20,6 +20,7 @@
 		13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */; };
 		13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */; };
 		13F9C21D2802930E00BB3B40 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */; };
+		13F9C2202802B3C400BB3B40 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C21F2802B3C400BB3B40 /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		13F9C21F2802B3C400BB3B40 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				1330EB1527FFD8F3004B690A /* ViewController.swift */,
 				13F9C20D2802868100BB3B40 /* PlannerViewController.swift */,
 				13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */,
+				13F9C21E2802B39C00BB3B40 /* PopUps */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,6 +164,14 @@
 				13F9C21B2802930E00BB3B40 /* CustomTableViewCell.xib */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		13F9C21E2802B39C00BB3B40 /* PopUps */ = {
+			isa = PBXGroup;
+			children = (
+				13F9C21F2802B3C400BB3B40 /* TaskViewController.swift */,
+			);
+			path = PopUps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */,
+				13F9C2202802B3C400BB3B40 /* TaskViewController.swift in Sources */,
 				1330EB1627FFD8F3004B690A /* ViewController.swift in Sources */,
 				13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */,
 				13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */,

@@ -15,8 +15,8 @@ struct Task {
 
 class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    @IBOutlet weak var taskButton: UIButton!
     @IBOutlet weak var plannerTitle: UILabel!
-    @IBOutlet weak var plannerStepper: UIStepper!
     @IBOutlet weak var table: UITableView!
     var tasks = [Task]()
     
@@ -30,7 +30,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return tasks.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
