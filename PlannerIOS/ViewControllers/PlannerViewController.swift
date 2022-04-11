@@ -35,7 +35,6 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         let taskDate = input![1]
         tasks.append(Task(name: taskName, time: taskDate))
         table.reloadData()
-        print(tasks.count)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,7 +42,18 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath)
+        let cell = table.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        cell.titleText.text = tasks[indexPath.row].name
+        cell.subtext.text = tasks[indexPath.row].time
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    @IBAction func tapNewPlanner(_ sender: Any) {
+        tasks = [Task]()
+        table.reloadData()
     }
 }
