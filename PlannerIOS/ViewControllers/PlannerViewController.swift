@@ -7,12 +7,6 @@
 
 import UIKit
 
-struct Task {
-    var name : String
-    var time : String
-    
-}
-
 class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var taskButton: UIButton!
@@ -20,6 +14,8 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var table: UITableView!
     var tasks = [Task]()
     var cellAnticipatingChange: Int?
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,29 +26,65 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         NotificationCenter.default.addObserver(self, selector: #selector(didGetTask(_:)), name: Notification.Name("task"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetReset(_:)), name: Notification.Name("resetPlanner"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetCellDeletion(_:)), name: Notification.Name("cellDelete"), object: nil)
+        retreivePlanner()
+    }
+    
+    func retreivePlanner(){
+        do {
+            self.tasks = try context.fetch(Task.fetchRequest())
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
+        catch {
+            
+        }
     }
     
     @objc func didGetTask(_ notification: Notification) {
         let input = notification.object as! Array<String>?
-        let taskName = input![0]
-        let taskDate = input![1]
-        let newTask = Task(name: taskName, time: taskDate)
+        let newName = input![0]
+        let newTime = input![1]
         if cellAnticipatingChange == nil {
+            let newTask = Task(context: context)
+            newTask.name = newName
+            newTask.time = newTime
             tasks.append(newTask)
         } else {
-            tasks[cellAnticipatingChange!] = newTask
+            tasks[cellAnticipatingChange!].name = newName
+            tasks[cellAnticipatingChange!].time = newTime
+        }
+        do {
+            try self.context.save()
+        } catch {
+            print("error attempting to save tasks")
         }
         table.reloadData()
     }
     
     @objc func didGetReset(_ notification: Notification) {
+        for task in tasks{
+            context.delete(task)
+        }
         tasks = [Task]()
+        do {
+            try self.context.save()
+        } catch {
+            print("error attempting to reset planner")
+        }
         table.reloadData()
+        
     }
     
     @objc func didGetCellDeletion(_ notification: Notification) {
+        context.delete(tasks[cellAnticipatingChange!])
         tasks.remove(at: cellAnticipatingChange!)
         cellAnticipatingChange = nil
+        do {
+            try self.context.save()
+        } catch {
+            print("error attempting to delete certain task")
+        }
         table.reloadData()
     }
     
