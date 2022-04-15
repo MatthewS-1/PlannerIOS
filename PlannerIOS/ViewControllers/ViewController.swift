@@ -26,7 +26,9 @@ class ViewController: UIViewController {
         present(PlannerVC, animated: true)
     }
     @IBAction func tapAnalytics(_ sender: Any) {
-    
+        guard let AnalyticsVC = storyboard?.instantiateViewController(withIdentifier: "AnalyticsViewController") as? AnalyticsViewController else { return }
+        AnalyticsVC.modalPresentationStyle = .fullScreen
+        present(AnalyticsVC, animated: true)
     }
     
 

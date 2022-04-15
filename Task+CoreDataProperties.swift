@@ -18,7 +18,7 @@ extension Task {
 
     @NSManaged public var name: String?
     @NSManaged public var time: String?
-    @NSManaged public var task: Planner?
+    @NSManaged public var planner: Planner?
 
 }
 

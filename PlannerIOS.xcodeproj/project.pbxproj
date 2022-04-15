@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1306ED08280520C0000668E1 /* Planner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */; };
+		1306ED09280520C0000668E1 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */; };
+		1306ED0B280521A8000668E1 /* Planner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */; };
+		1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */; };
 		1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1127FFD8F3004B690A /* AppDelegate.swift */; };
 		1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1327FFD8F3004B690A /* SceneDelegate.swift */; };
 		1330EB1627FFD8F3004B690A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1527FFD8F3004B690A /* ViewController.swift */; };
@@ -17,8 +21,6 @@
 		1330EB3327FFD8F3004B690A /* PlannerIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB3227FFD8F3004B690A /* PlannerIOSUITests.swift */; };
 		1330EB3527FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */; };
 		133315C128049BC900D095D1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 133315BF28049BC900D095D1 /* Model.xcdatamodeld */; };
-		133315C92804C34400D095D1 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133315C72804C34400D095D1 /* Task+CoreDataClass.swift */; };
-		133315CA2804C34400D095D1 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133315C82804C34400D095D1 /* Task+CoreDataProperties.swift */; };
 		1370F0042803B79C00BAEAB1 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370F0032803B79C00BAEAB1 /* FinishedViewController.swift */; };
 		1370F0062803C77000BAEAB1 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370F0052803C77000BAEAB1 /* CellViewController.swift */; };
 		13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C20D2802868100BB3B40 /* PlannerViewController.swift */; };
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Planner+CoreDataProperties.swift"; path = "../../Planner+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Planner+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1330EB0E27FFD8F3004B690A /* PlannerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1330EB1127FFD8F3004B690A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1330EB1327FFD8F3004B690A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +66,6 @@
 		1330EB3227FFD8F3004B690A /* PlannerIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerIOSUITests.swift; sourceTree = "<group>"; };
 		1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		133315C028049BC900D095D1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		133315C72804C34400D095D1 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
-		133315C82804C34400D095D1 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1370F0032803B79C00BAEAB1 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		1370F0052803C77000BAEAB1 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		13F9C20D2802868100BB3B40 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +156,10 @@
 		133315CB2804C35700D095D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				133315C72804C34400D095D1 /* Task+CoreDataClass.swift */,
-				133315C82804C34400D095D1 /* Task+CoreDataProperties.swift */,
+				1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */,
+				1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */,
+				1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */,
+				1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,7 +335,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1306ED08280520C0000668E1 /* Planner+CoreDataProperties.swift in Sources */,
 				1370F0042803B79C00BAEAB1 /* FinishedViewController.swift in Sources */,
+				1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */,
 				13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */,
 				13F9C2202802B3C400BB3B40 /* TaskViewController.swift in Sources */,
 				1370F0062803C77000BAEAB1 /* CellViewController.swift in Sources */,
@@ -337,9 +345,9 @@
 				13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */,
 				13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */,
 				133315C128049BC900D095D1 /* Model.xcdatamodeld in Sources */,
-				133315C92804C34400D095D1 /* Task+CoreDataClass.swift in Sources */,
 				1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */,
-				133315CA2804C34400D095D1 /* Task+CoreDataProperties.swift in Sources */,
+				1306ED0B280521A8000668E1 /* Planner+CoreDataClass.swift in Sources */,
+				1306ED09280520C0000668E1 /* Task+CoreDataProperties.swift in Sources */,
 				1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
