@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlannerIOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="PlannerIOS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tapPlanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADD-uR-75a"/>
+                                            <action selector="tapPlanner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qP4-bZ-GcQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-kN-Xb2">
@@ -63,7 +63,7 @@
                                             </attributedString>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tapAnalytics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWa-qh-89o"/>
+                                            <action selector="tapAnalytics:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfP-Sx-Scm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,8 +81,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="analyticsButton" destination="fYu-kN-Xb2" id="Ac3-Ix-s2X"/>
-                        <outlet property="plannerButton" destination="mSf-Wt-UX4" id="Cdj-BV-rok"/>
+                        <outlet property="analyticsButton" destination="fYu-kN-Xb2" id="uZo-iv-w6o"/>
+                        <outlet property="plannerButton" destination="mSf-Wt-UX4" id="idb-83-DPJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,7 +116,6 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
                                 <connections>
                                     <action selector="tapAddTask:" destination="fYf-Qc-dnu" eventType="touchUpInside" id="t2W-gF-N2G"/>
-                                    <segue destination="sXO-bY-ooc" kind="show" id="z55-ER-8pN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-2b-zfY">

@@ -19,14 +19,20 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         table.delegate = self
         table.dataSource = self
+        
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
+        
         NotificationCenter.default.addObserver(self, selector: #selector(didGetTask(_:)), name: Notification.Name("task"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetReset(_:)), name: Notification.Name("resetPlanner"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didGetCellDeletion(_:)), name: Notification.Name("cellDelete"), object: nil)
+        
         retreivePlanner()
+        
+        addSwipeGestures(view: view, target: self, swipeLeft: #selector(tapAddTask(_:)), swipeRight: #selector(returnHome))
     }
     
     func retreivePlanner(){
@@ -105,7 +111,14 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         cellAnticipatingChange = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     @IBAction func tapAddTask(_ sender: Any) {
         cellAnticipatingChange = nil
+        guard let TaskVC = storyboard?.instantiateViewController(withIdentifier: "TaskViewController") as? TaskViewController else { return }
+        present(TaskVC, animated: true)
+    }
+    
+    @objc func returnHome(){
+        presentHome(self)
     }
 }

@@ -13,7 +13,7 @@
 		1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */; };
 		1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1127FFD8F3004B690A /* AppDelegate.swift */; };
 		1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1327FFD8F3004B690A /* SceneDelegate.swift */; };
-		1330EB1627FFD8F3004B690A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1527FFD8F3004B690A /* ViewController.swift */; };
+		1330EB1627FFD8F3004B690A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1527FFD8F3004B690A /* HomeViewController.swift */; };
 		1330EB1927FFD8F3004B690A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1330EB1727FFD8F3004B690A /* Main.storyboard */; };
 		1330EB1B27FFD8F3004B690A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1330EB1A27FFD8F3004B690A /* Assets.xcassets */; };
 		1330EB1E27FFD8F3004B690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1330EB1C27FFD8F3004B690A /* LaunchScreen.storyboard */; };
@@ -23,6 +23,7 @@
 		133315C128049BC900D095D1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 133315BF28049BC900D095D1 /* Model.xcdatamodeld */; };
 		1370F0042803B79C00BAEAB1 /* FinishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370F0032803B79C00BAEAB1 /* FinishedViewController.swift */; };
 		1370F0062803C77000BAEAB1 /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1370F0052803C77000BAEAB1 /* CellViewController.swift */; };
+		13B3C5712812A61F00ACE6C4 /* ViewControllerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3C5702812A61F00ACE6C4 /* ViewControllerFunctions.swift */; };
 		13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C20D2802868100BB3B40 /* PlannerViewController.swift */; };
 		13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */; };
 		13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */; };
@@ -55,7 +56,7 @@
 		1330EB0E27FFD8F3004B690A /* PlannerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1330EB1127FFD8F3004B690A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1330EB1327FFD8F3004B690A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1330EB1527FFD8F3004B690A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1330EB1527FFD8F3004B690A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1330EB1827FFD8F3004B690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1330EB1A27FFD8F3004B690A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1330EB1D27FFD8F3004B690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		133315C028049BC900D095D1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		1370F0032803B79C00BAEAB1 /* FinishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedViewController.swift; sourceTree = "<group>"; };
 		1370F0052803C77000BAEAB1 /* CellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		13B3C5702812A61F00ACE6C4 /* ViewControllerFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFunctions.swift; sourceTree = "<group>"; };
 		13F9C20D2802868100BB3B40 /* PlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewController.swift; sourceTree = "<group>"; };
 		13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
 		13F9C21A2802930E00BB3B40 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -167,7 +169,8 @@
 		13F9C20F2802869200BB3B40 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1330EB1527FFD8F3004B690A /* ViewController.swift */,
+				13B3C5702812A61F00ACE6C4 /* ViewControllerFunctions.swift */,
+				1330EB1527FFD8F3004B690A /* HomeViewController.swift */,
 				13F9C20D2802868100BB3B40 /* PlannerViewController.swift */,
 				13F9C210280286A400BB3B40 /* AnalyticsViewController.swift */,
 				13F9C21E2802B39C00BB3B40 /* PopUps */,
@@ -336,12 +339,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1306ED08280520C0000668E1 /* Planner+CoreDataProperties.swift in Sources */,
+				13B3C5712812A61F00ACE6C4 /* ViewControllerFunctions.swift in Sources */,
 				1370F0042803B79C00BAEAB1 /* FinishedViewController.swift in Sources */,
 				1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */,
 				13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */,
 				13F9C2202802B3C400BB3B40 /* TaskViewController.swift in Sources */,
 				1370F0062803C77000BAEAB1 /* CellViewController.swift in Sources */,
-				1330EB1627FFD8F3004B690A /* ViewController.swift in Sources */,
+				1330EB1627FFD8F3004B690A /* HomeViewController.swift in Sources */,
 				13F9C20E2802868100BB3B40 /* PlannerViewController.swift in Sources */,
 				13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */,
 				133315C128049BC900D095D1 /* Model.xcdatamodeld in Sources */,
