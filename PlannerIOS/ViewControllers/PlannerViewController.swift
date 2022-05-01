@@ -10,7 +10,7 @@ import UIKit
 class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var taskButton: UIButton!
-    @IBOutlet weak var plannerTitle: UILabel!
+    @IBOutlet weak var plannerTitle: UITextField!
     @IBOutlet weak var table: UITableView!
     var tasks = [Task]()
     var cellAnticipatingChange: Int?
@@ -22,7 +22,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         table.delegate = self
         table.dataSource = self
-        
+
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
         table.register(nib, forCellReuseIdentifier: "CustomTableViewCell")
         
@@ -37,7 +37,11 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func retreivePlanner(){
         do {
-            self.tasks = try context.fetch(Task.fetchRequest())
+            let request = Task.fetchRequest()
+            let pred = NSPredicate(format: "planner == nil")
+            request.predicate = pred
+            
+            self.tasks = try context.fetch(request)
             DispatchQueue.main.async {
                 self.table.reloadData()
             }
@@ -69,10 +73,25 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @objc func didGetReset(_ notification: Notification) {
-        for task in tasks{
-            context.delete(task)
+        let planner = Planner(context: context)
+        if let plannerName = plannerTitle.text {
+            if plannerName == "Enter Planner Name" {
+                do {
+                    let plannerCount = try context.count(for: Planner.fetchRequest())
+                    planner.name = "Planner \(plannerCount)"
+                } catch {
+                    print("error attempting to count number of planners")
+                }
+            } else {
+                planner.name = plannerName
+            }
+        } else {
+            planner.name = ""
         }
-        tasks = [Task]()
+        for task in tasks{
+            task.planner = planner
+        }
+        retreivePlanner()
         do {
             try self.context.save()
         } catch {
@@ -106,9 +125,9 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        cellAnticipatingChange = indexPath.row
         guard let CellVC = storyboard?.instantiateViewController(withIdentifier: "CellViewController") as? CellViewController else { return }
         present(CellVC, animated: true)
-        cellAnticipatingChange = indexPath.row
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

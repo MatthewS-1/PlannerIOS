@@ -98,20 +98,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lRe-Vu-gvh">
-                                <rect key="frame" x="0.0" y="122" width="414" height="605"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="606"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Planner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5eP-xb-3bg">
-                                <rect key="frame" x="20" y="52" width="149.5" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="hO2-6g-oTG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieV-ay-j2T">
-                                <rect key="frame" x="330.5" y="55" width="83.5" height="31"/>
+                                <rect key="frame" x="330.5" y="55" width="83.5" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Add Task"/>
                                 <connections>
@@ -135,21 +126,30 @@
                                     <segue destination="WUK-Ug-OAa" kind="show" id="XxB-dD-MuO"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Planner Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ENz-ZH-eM9">
+                                <rect key="frame" x="20" y="53" width="248" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="hkv-lG-JLS"/>
+                                    <constraint firstAttribute="height" constant="34" id="nX6-Es-bb5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RMG-H3-PSN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5eP-xb-3bg" firstAttribute="leading" secondItem="i3s-sD-vPe" secondAttribute="leadingMargin" id="5p8-9r-zCh"/>
-                            <constraint firstItem="RMG-H3-PSN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5eP-xb-3bg" secondAttribute="trailing" symbolic="YES" id="C96-98-uom"/>
-                            <constraint firstItem="lRe-Vu-gvh" firstAttribute="top" secondItem="5eP-xb-3bg" secondAttribute="bottom" constant="33" id="D7f-SP-vSO"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="top" secondItem="RMG-H3-PSN" secondAttribute="top" constant="11" id="9Ag-x5-9VT"/>
                             <constraint firstItem="3qy-2b-zfY" firstAttribute="centerX" secondItem="lRe-Vu-gvh" secondAttribute="centerX" id="Ek3-ff-kCL"/>
                             <constraint firstItem="lRe-Vu-gvh" firstAttribute="leading" secondItem="RMG-H3-PSN" secondAttribute="leading" id="FMK-92-hP0"/>
+                            <constraint firstItem="lRe-Vu-gvh" firstAttribute="top" secondItem="ieV-ay-j2T" secondAttribute="bottom" constant="36" id="H7c-tz-Zyw"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="centerY" secondItem="ENz-ZH-eM9" secondAttribute="centerY" id="N8c-kM-8mZ"/>
                             <constraint firstAttribute="bottomMargin" secondItem="3qy-2b-zfY" secondAttribute="bottom" constant="-18" id="VJY-k8-gHg"/>
                             <constraint firstItem="3qy-2b-zfY" firstAttribute="leading" secondItem="RMG-H3-PSN" secondAttribute="leading" constant="118" id="bAR-CI-Ejc"/>
+                            <constraint firstItem="ieV-ay-j2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ENz-ZH-eM9" secondAttribute="trailing" constant="8" symbolic="YES" id="cNx-BE-hgq"/>
                             <constraint firstItem="RMG-H3-PSN" firstAttribute="bottom" secondItem="lRe-Vu-gvh" secondAttribute="bottom" constant="86" id="dHF-Bi-Y5l"/>
-                            <constraint firstItem="ieV-ay-j2T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5eP-xb-3bg" secondAttribute="trailing" constant="8" symbolic="YES" id="fzo-Ds-YJr"/>
-                            <constraint firstItem="ieV-ay-j2T" firstAttribute="centerY" secondItem="5eP-xb-3bg" secondAttribute="centerY" id="pGg-Ei-Lfv"/>
-                            <constraint firstItem="5eP-xb-3bg" firstAttribute="top" secondItem="RMG-H3-PSN" secondAttribute="top" constant="8" id="s0z-aQ-TbV"/>
+                            <constraint firstItem="ENz-ZH-eM9" firstAttribute="top" secondItem="RMG-H3-PSN" secondAttribute="top" constant="9" id="kYE-NJ-bu5"/>
+                            <constraint firstItem="ENz-ZH-eM9" firstAttribute="leading" secondItem="i3s-sD-vPe" secondAttribute="leadingMargin" id="osl-74-IlB"/>
                             <constraint firstItem="3qy-2b-zfY" firstAttribute="top" secondItem="lRe-Vu-gvh" secondAttribute="bottom" constant="44" id="u0r-5q-bAr"/>
                             <constraint firstItem="ieV-ay-j2T" firstAttribute="trailing" secondItem="lRe-Vu-gvh" secondAttribute="trailing" id="usQ-Ux-Ng2"/>
                             <constraint firstItem="RMG-H3-PSN" firstAttribute="trailing" secondItem="lRe-Vu-gvh" secondAttribute="trailing" id="wQl-sP-EBr"/>
@@ -159,7 +159,7 @@
                     <navigationItem key="navigationItem" id="ZBZ-VZ-gyO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="plannerTitle" destination="5eP-xb-3bg" id="A65-vn-1jg"/>
+                        <outlet property="plannerTitle" destination="ENz-ZH-eM9" id="Hjm-V0-6zS"/>
                         <outlet property="table" destination="lRe-Vu-gvh" id="kZD-Zy-7yY"/>
                         <outlet property="taskButton" destination="ieV-ay-j2T" id="Np7-Q0-cvg"/>
                     </connections>
