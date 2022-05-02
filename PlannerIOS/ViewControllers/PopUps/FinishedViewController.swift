@@ -10,16 +10,15 @@ import UIKit
 class FinishedViewController: UIViewController {
 
     @IBOutlet weak var newPlannerButton: UIButton!
+    @IBOutlet weak var plannerName: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    
     @IBAction func tapNewPlanner(_ sender: Any) {
-        NotificationCenter.default.post(name: Notification.Name("resetPlanner"), object: nil)
+        NotificationCenter.default.post(name: Notification.Name("resetPlanner"), object: plannerName.text)
         dismiss(animated: true)
     }
     

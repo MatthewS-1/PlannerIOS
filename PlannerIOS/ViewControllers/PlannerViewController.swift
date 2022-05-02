@@ -10,7 +10,6 @@ import UIKit
 class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var taskButton: UIButton!
-    @IBOutlet weak var plannerTitle: UITextField!
     @IBOutlet weak var table: UITableView!
     var tasks = [Task]()
     var cellAnticipatingChange: Int?
@@ -74,19 +73,16 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @objc func didGetReset(_ notification: Notification) {
         let planner = Planner(context: context)
-        if let plannerName = plannerTitle.text {
-            if plannerName == "Enter Planner Name" {
-                do {
-                    let plannerCount = try context.count(for: Planner.fetchRequest())
-                    planner.name = "Planner \(plannerCount)"
-                } catch {
-                    print("error attempting to count number of planners")
-                }
-            } else {
-                planner.name = plannerName
+        let plannerName = notification.object as! String
+        if plannerName == "Enter Planner Name" {
+            do {
+                let plannerCount = try context.count(for: Planner.fetchRequest())
+                planner.name = "Planner \(plannerCount)"
+            } catch {
+                print("error attempting to count number of planners")
             }
         } else {
-            planner.name = ""
+            planner.name = plannerName
         }
         for task in tasks{
             task.planner = planner

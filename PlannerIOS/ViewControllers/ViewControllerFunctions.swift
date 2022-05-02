@@ -11,13 +11,18 @@ import UIKit
 let UIButtonCornerRadius = CGFloat(20)
 
 func addSwipeGestures(view: UIView, target: Any?, swipeLeft: Selector, swipeRight: Selector){
+    addSwipeLeft(view: view, target: target, swipeLeft: swipeLeft)
+    addSwipeRight(view: view, target: target, swipeRight: swipeRight)
+}
+
+func addSwipeLeft(view: UIView, target: Any?, swipeLeft: Selector){
     let leftSwipe = UISwipeGestureRecognizer(target: target, action: swipeLeft)
-    let rightSwipe = UISwipeGestureRecognizer(target: target, action: swipeRight)
-    
     leftSwipe.direction = .left
-    rightSwipe.direction = .right
-    
     view.addGestureRecognizer(leftSwipe)
+}
+func addSwipeRight(view: UIView, target: Any?, swipeRight: Selector){
+    let rightSwipe = UISwipeGestureRecognizer(target: target, action: swipeRight)
+    rightSwipe.direction = .right
     view.addGestureRecognizer(rightSwipe)
 }
 
