@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1306ED08280520C0000668E1 /* Planner+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */; };
-		1306ED09280520C0000668E1 /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */; };
-		1306ED0B280521A8000668E1 /* Planner+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */; };
-		1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */; };
 		1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1127FFD8F3004B690A /* AppDelegate.swift */; };
 		1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1327FFD8F3004B690A /* SceneDelegate.swift */; };
 		1330EB1627FFD8F3004B690A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1330EB1527FFD8F3004B690A /* HomeViewController.swift */; };
@@ -52,10 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Planner+CoreDataProperties.swift"; path = "../../Planner+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Planner+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1330EB0E27FFD8F3004B690A /* PlannerIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlannerIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1330EB1127FFD8F3004B690A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1330EB1327FFD8F3004B690A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,10 +167,6 @@
 		133315CB2804C35700D095D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1306ED06280520C0000668E1 /* Planner+CoreDataProperties.swift */,
-				1306ED0A280521A8000668E1 /* Planner+CoreDataClass.swift */,
-				1306ED07280520C0000668E1 /* Task+CoreDataProperties.swift */,
-				1306ED0C280521D8000668E1 /* Task+CoreDataClass.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,7 +231,6 @@
 				766243FA87B182B153BB8C4F /* Pods-PlannerIOSTests.debug.xcconfig */,
 				3BD3E0E5FCA1A6B5DAF5A24C /* Pods-PlannerIOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -487,10 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1306ED08280520C0000668E1 /* Planner+CoreDataProperties.swift in Sources */,
 				13B3C5712812A61F00ACE6C4 /* ViewControllerFunctions.swift in Sources */,
 				1370F0042803B79C00BAEAB1 /* FinishedViewController.swift in Sources */,
-				1306ED0D280521D9000668E1 /* Task+CoreDataClass.swift in Sources */,
 				13F9C21C2802930E00BB3B40 /* CustomTableViewCell.swift in Sources */,
 				13F9C2202802B3C400BB3B40 /* TaskViewController.swift in Sources */,
 				1370F0062803C77000BAEAB1 /* CellViewController.swift in Sources */,
@@ -499,8 +484,6 @@
 				13F9C211280286A400BB3B40 /* AnalyticsViewController.swift in Sources */,
 				133315C128049BC900D095D1 /* Model.xcdatamodeld in Sources */,
 				1330EB1227FFD8F3004B690A /* AppDelegate.swift in Sources */,
-				1306ED0B280521A8000668E1 /* Planner+CoreDataClass.swift in Sources */,
-				1306ED09280520C0000668E1 /* Task+CoreDataProperties.swift in Sources */,
 				1330EB1427FFD8F3004B690A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

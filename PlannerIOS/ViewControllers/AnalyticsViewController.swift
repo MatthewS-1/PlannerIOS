@@ -7,6 +7,7 @@
 
 import UIKit
 import Charts
+import CoreData
 
 class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
@@ -28,8 +29,11 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
     func retreivePlanners(){
         do {
-            let request = Planner.fetchRequest()
+            let request = Planner.fetchRequest() as NSFetchRequest<Planner>
             self.planners = try context.fetch(request)
+            self.planners.sort{
+                $0.tasks?.count ?? 0 < $1.tasks?.count ?? 0
+            }
         }
         catch {
             
