@@ -12,6 +12,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var taskButton: UIButton!
     @IBOutlet weak var table: UITableView!
     var tasks = [Task]()
+    // cell anticipating change will store the index of the selected cell or will store nil if nothing is to be changed
     var cellAnticipatingChange: Int?
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -37,6 +38,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     func retreivePlanner(){
         do {
             let request = Task.fetchRequest()
+            // If a task entity is not mapped to a planner, that means it isn't finished yet, and should be displayed
             let pred = NSPredicate(format: "planner == nil")
             request.predicate = pred
             
@@ -49,11 +51,12 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         }
     }
-    
+    // didGetTask is called whenever the TaskViewController is used by the user to create or edit a task
     @objc func didGetTask(_ notification: Notification) {
         let input = notification.object as! Array<String>?
         let newName = input![0]
         let newTime = input![1]
+        // If we weren't anticipating a cell to change, that means we should create a new cell with the given name and time
         if cellAnticipatingChange == nil {
             let newTask = Task(context: context)
             newTask.name = newName
@@ -74,6 +77,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
     @objc func didGetReset(_ notification: Notification) {
         let planner = Planner(context: context)
         let plannerName = notification.object as! String
+        // If the user didn't enter a planner name, just name the planner after what iteration it is.
         if plannerName == "Enter Planner Name" {
             do {
                 let plannerCount = try context.count(for: Planner.fetchRequest())
@@ -84,6 +88,7 @@ class PlannerViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             planner.name = plannerName
         }
+        // once each task in the planner is assigned to a planner entity, then these tasks will no longer appear in retrievePlanner. This would clear the planner.
         for task in tasks{
             task.planner = planner
         }

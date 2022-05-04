@@ -139,7 +139,6 @@
 				13F9C212280286C000BB3B40 /* Delegates */,
 				13F9C20F2802869200BB3B40 /* ViewControllers */,
 				13F9C21328028B2500BB3B40 /* Helpers */,
-				133315CB2804C35700D095D1 /* Models */,
 				1330EB1727FFD8F3004B690A /* Main.storyboard */,
 				1330EB1A27FFD8F3004B690A /* Assets.xcassets */,
 				1330EB1C27FFD8F3004B690A /* LaunchScreen.storyboard */,
@@ -164,13 +163,6 @@
 				1330EB3427FFD8F3004B690A /* PlannerIOSUITestsLaunchTests.swift */,
 			);
 			path = PlannerIOSUITests;
-			sourceTree = "<group>";
-		};
-		133315CB2804C35700D095D1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		13F9C20F2802869200BB3B40 /* ViewControllers */ = {

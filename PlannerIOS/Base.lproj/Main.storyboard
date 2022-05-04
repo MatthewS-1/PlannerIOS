@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-bT-xhY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomePlannerPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-bT-xhY">
                                 <rect key="frame" x="35" y="99" width="344" height="268"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="268" id="NRC-6e-t6y"/>
@@ -506,6 +506,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HomePlannerPhoto" width="802" height="740"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

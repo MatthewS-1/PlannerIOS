@@ -16,7 +16,7 @@ class PopUpPlannerViewController: PlannerViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(didGetPlanner(_:)), name: Notification.Name("sendPlanner"), object: nil)
     }
-    
+    // once we receive the planner, load it into the table view
     @objc func didGetPlanner(_ notification: Notification) {
         let planner = notification.object as! Planner?
         let plannerTasks = planner?.tasks?.array as! [Task]

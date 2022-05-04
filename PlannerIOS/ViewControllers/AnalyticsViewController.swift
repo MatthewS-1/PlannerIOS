@@ -13,8 +13,6 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
     @IBOutlet weak var combinedChart: CombinedChartView!
     var planners = [Planner]()
-    let chartPadding = CGFloat(30)
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
@@ -29,6 +27,7 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
     func retreivePlanners(){
         do {
+            // retreive and sort the planners so that the chart is also sorted
             let request = Planner.fetchRequest() as NSFetchRequest<Planner>
             self.planners = try context.fetch(request)
             self.planners.sort{
@@ -39,6 +38,13 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
             
         }
     }
+    // To avoid the chart from being too large, trim the planners array.
+    func trimPlanners(length: Int = 15){
+        for _ in 0..<planners.count-length{
+            context.delete(planners[0])
+            planners.remove(at: 0)
+        }
+    }
     
     @objc func returnHome(){
         presentHome(self)
@@ -46,7 +52,7 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        // disabling to make the chart cleaner
         combinedChart.noDataText = "Data is not available until a planner is finished."
         combinedChart.xAxis.drawGridLinesEnabled = false
         combinedChart.xAxis.drawLabelsEnabled = false
@@ -75,26 +81,13 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
         data.barData = BarChartData(dataSet: barChartSet)
         data.lineData = LineChartData(dataSet: lineChartSet)
         
-        var names = [String]()
-        for planner in planners {
-            names.append(planner.name ?? "")
-        }
-        combinedChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: names)
-        combinedChart.xAxis.granularity = 1
         combinedChart.data = data
     }
-    
+    // if a bar chart is selected, load the preview popup and send the selected planner to that popup.
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
         guard let PopUpPlannerVC = storyboard?.instantiateViewController(withIdentifier: "PopUpPlannerViewController") as? PopUpPlannerViewController else { return }
         present(PopUpPlannerVC, animated: true)
         let i = Int(entry.x-1)
         NotificationCenter.default.post(name: Notification.Name("sendPlanner"), object: self.planners[i])
-    }
-    
-    func trimPlanners(length: Int = 15){
-        for _ in 0..<planners.count-length{
-            context.delete(planners[0])
-            planners.remove(at: 0)
-        }
     }
 }
