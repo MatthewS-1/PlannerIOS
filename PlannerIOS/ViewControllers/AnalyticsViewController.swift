@@ -79,11 +79,16 @@ class AnalyticsViewController: UIViewController, ChartViewDelegate {
         for planner in planners {
             names.append(planner.name ?? "")
         }
-        print(names)
-        print(names.count)
         combinedChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: names)
         combinedChart.xAxis.granularity = 1
         combinedChart.data = data
+    }
+    
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let PopUpPlannerVC = storyboard?.instantiateViewController(withIdentifier: "PopUpPlannerViewController") as? PopUpPlannerViewController else { return }
+        present(PopUpPlannerVC, animated: true)
+        let i = Int(entry.x-1)
+        NotificationCenter.default.post(name: Notification.Name("sendPlanner"), object: self.planners[i])
     }
     
     func trimPlanners(length: Int = 15){

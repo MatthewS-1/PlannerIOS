@@ -281,6 +281,61 @@
             </objects>
             <point key="canvasLocation" x="-649.27536231884062" y="71.651785714285708"/>
         </scene>
+        <!--Pop Up Planner View Controller-->
+        <scene sceneID="p7g-JX-DKX">
+            <objects>
+                <viewController storyboardIdentifier="PopUpPlannerViewController" id="RGs-YQ-Wkz" customClass="PopUpPlannerViewController" customModule="PlannerIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4JB-kl-Ivj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O1f-Aq-MZn">
+                                <rect key="frame" x="87" y="195" width="240" height="506"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XRh-aA-0mS">
+                                        <rect key="frame" x="0.0" y="85" width="240" height="421"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planner Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyg-pZ-XOm">
+                                        <rect key="frame" x="21" y="8" width="198" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="kDH-K6-A6e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xyg-pZ-XOm" firstAttribute="leading" secondItem="O1f-Aq-MZn" secondAttribute="leading" constant="21" id="3NL-n7-8Sl"/>
+                                    <constraint firstItem="xyg-pZ-XOm" firstAttribute="centerX" secondItem="XRh-aA-0mS" secondAttribute="centerX" id="3bE-zf-Dv2"/>
+                                    <constraint firstItem="XRh-aA-0mS" firstAttribute="top" secondItem="xyg-pZ-XOm" secondAttribute="bottom" constant="19" id="EN1-C1-p5F"/>
+                                    <constraint firstAttribute="bottom" secondItem="XRh-aA-0mS" secondAttribute="bottom" id="fUJ-3h-gyq"/>
+                                    <constraint firstItem="xyg-pZ-XOm" firstAttribute="centerX" secondItem="O1f-Aq-MZn" secondAttribute="centerX" id="mk5-wl-cPj"/>
+                                    <constraint firstItem="xyg-pZ-XOm" firstAttribute="top" secondItem="O1f-Aq-MZn" secondAttribute="topMargin" id="yMP-Av-buX"/>
+                                    <constraint firstItem="XRh-aA-0mS" firstAttribute="leading" secondItem="O1f-Aq-MZn" secondAttribute="leading" id="yZq-XG-k7T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wrn-FO-dg3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O1f-Aq-MZn" firstAttribute="centerX" secondItem="4JB-kl-Ivj" secondAttribute="centerX" id="1XA-y6-tu0"/>
+                            <constraint firstItem="O1f-Aq-MZn" firstAttribute="centerY" secondItem="4JB-kl-Ivj" secondAttribute="centerY" id="7ke-3n-VON"/>
+                            <constraint firstItem="O1f-Aq-MZn" firstAttribute="leading" secondItem="wrn-FO-dg3" secondAttribute="leading" constant="87" id="WgP-ht-ca9"/>
+                            <constraint firstItem="O1f-Aq-MZn" firstAttribute="top" secondItem="wrn-FO-dg3" secondAttribute="top" constant="151" id="iBr-We-WXS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="plannerName" destination="xyg-pZ-XOm" id="p7g-lJ-3TO"/>
+                        <outlet property="table" destination="XRh-aA-0mS" id="EQs-Qw-azo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaP-pG-RrO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655.07246376811599" y="733.92857142857144"/>
+        </scene>
         <!--Finished View Controller-->
         <scene sceneID="Zw8-mm-FLh">
             <objects>
